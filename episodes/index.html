@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
       .season-image {
-        width: 100px;
+        width: 200px;
         height: auto;
       }
       .seasons {
@@ -61,6 +61,63 @@
           <li><a href="\gallery\index.html">Gallery</a></li>
           <li><a href="\contact\index.html">Contact</a></li>
         </ul>
+        <style>
+          .season-image {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+          }
+          .seasons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          .season {
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            width: 200px;
+          }
+          .season-button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #6f4e37;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .episode-list {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: #eee;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+          .season:hover .episode-list {
+            display: block;
+          }
+          .episode-list li {
+            margin: 10px 0;
+          }
+          .episode-list li a {
+            color: #6f4e37;
+            transition: color 0.3s ease;
+          }
+          .episode-list li a:hover {
+            color: #c95f2b;
+          }
+          @media (min-width: 768px) {
+            .season {
+              width: calc(25% - 10px);
+            }
+          }
+        </style>
       </nav>
     </header>
     <main>
